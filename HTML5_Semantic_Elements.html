@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" class="index-bg">
+<head>
+<meta charset="UTF-8">
+<title>HTML5 Semantic Elements</title>
+<style type="text/css">
+</style>
+<link href="style2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<h1>HTML5 Semantic Elements</h1>
+</header>
+
+<nav>
+
+</nav>
+
+<h2>Accessible to all</h2>
+
+<p>In her book <i>Letting go of the words</i>, Janice Redish (2012) describes how to design useful and meaningful websites and depicts a user&rsquo;s interactions with a website as a series of conversations between themselves and the website. Redish labels successful conversations as having characteristics that include answering your site visitors&rsquo; questions, encouraging further use, and being accessible to all. This last point about accessibility is incredibly important since, according to the Center for Disease Control, 22.2% of the current United States population is living with a disability (Courtney-Long <i>et al.</i> 2015). Of these 53,000,000 people, 4.6% are visually impaired and rely on accessibility software such as screen readers to help them have useful conversations with websites. So how are web developers making sure that these nearly 2.5 million people have access to and meaningful interactions with their content?</p>
+
+
+<h2>Braille: An 'old' technology</h2>
+
+<p>With the evolution of HTML5, there are now many tools available for web designers to help provide a meaningful experience for visually impaired users. These semantic tools, however, are relatively new and have journeyed a long road of changing considerations to get where they are today. </p>
+<p>Before we discuss current considerations for websites, let&rsquo;s travel back to 1860, the year Braille (a system of touch reading for visually impaired people) was introduced in the United States (BrailleWorks, 2016). At this point, printed books had been around for centuries, but the only access that visually impaired individuals had to these resources was dependent on someone reading the information to them. With the advent of Braille, people no longer had to rely on others, and consequently, others&rsquo; interruptions of the material, to gain access to the wealth of printed information. But how were certain characteristics of printed words that relayed emphasis, like bold and italic type, transformed from a visual state to something that could be interpreted by touch? It turns out that there are characters in Braille that signify <em>importance</em> or <em>emphasis</em> for specified words or letters and give meaning as &lsquo;bold&rsquo;, &lsquo;italics&rsquo;, &lsquo;underlined&rsquo;, or &lsquo;highlighted&rsquo;. However, in a printed text when bold or italic font attributes are used to denote a purely physical property (as a heading, for example), the emphasis Braille characters are <strong><em>not</em></strong> used (BANA, 2016). They are only used when there is <em>semantic meaning</em> attached to the physical characteristic of the word. If a bold character does not provide any extra useful information, Braille translators will skip it and translate the word as normal text. This distinction will become important as we consider what it means to be a visually impaired person in the age of virtual content. But first let&rsquo;s discuss how old and new technologies interact and what this means in terms of &ldquo;accessibility for all&rdquo;.</p>
+
+<h2>Why 'new' isn't always 'improved'</h2>
+
+<p>In her article <i>On the relationship between old and new technologies</i>, Christina Haas (1999) argues that technology should be treated as a cultural artifact, as it is affected by history and value. Oversimplified models of technological development do not take these attributes into consideration and tend to portray new technologies as better (the straightforward progress model) or always replacing the old technology (the simple replacement model). According to Haas (1999), the historical and cultural value of the old technology in these simple models is minimized, which leads to marginalization of equitable access concerns (210).</p>
+
+<p>Consider the introduction of screen readers for HTML in 1986 (Cooke, 2004). This technology would be considered &lsquo;new&rsquo; when compared to Braille. Thus, in the simplified models of technological advancement, screen readers would be &lsquo;better&rsquo; at their task that Braille and would completely replace the old technology. Putting aside that each technology is translating information from different media, they are indeed preforming the same task: making content that is visually displayed available to those with visual impairments. So why wouldn&rsquo;t the oversimplified models hold true in this case? Once we start to consider semantic nuances and where this information is coming from, the simplified models fall apart. For example, when converting a print text to Braille, a translator is interpreting and carrying over semantic characteristics from the text based on their experience, which is steeped in cultural and historical implications (something that oversimplified models of technology do <em>not</em> consider). Prior to HTML4, semantic nuances of particular words or phrases in the text were largely relegated to bold &lt;b&gt;, and italics &lt;i&gt; elements. If &lt;b&gt; and &lt;i&gt; were only used for this purpose, the semantic meaning of the text may have been preserved. As it was, however, these elements were also heavily used to indicate structural and physical characteristics of the text; characteristics that would have largely been ignored in the translation to Braille. The resulting translation of the website read by a screen reader, a computer program with no cultural or historical reference, would translate all instances of &lt;b&gt; and &lt;i&gt;, leaving semantic meaning muddled and users confused. In this situation, the oversimplified models of the &lsquo;new&rsquo; technologies of HTML and screen readers do not hold up, as the &lsquo;old&rsquo; technologies of print and Braille have managed to accomplish the task of semantic translation more effectively. So what does this mean in terms of website accessibility for all? How can we ensure that visually impaired users are able to have meaningful conversations with the websites we develop?</p>
+
+<h2>HTML5&rsquo;s semantic revisioning</h2>
+
+<p>If one of Christina Haas&rsquo; goal in her 1999 article was to complicate the simplistic view of technology, I believe that the semantic considerations given to elements, both new and historical, in HTML5 would be a great example of a complex view that works to reduce the concerns of equitable access for all users. In the recently released editor&rsquo;s draft of HTML 5.2 by the w3c Web Platform Working Group (2016), still in progress, several historical HTML elements have been given semantic meaning. The below table lists a few of these elements as summarized by Oli Studholme (2010), drawing from the w3c HTML 5.2 reference.</p>
+
+<p>At first exposure, it is unclear when these elements should be used. Web designers may think that if it all renders to &lsquo;italics&rsquo; what is the difference if I use &lt;i&gt; or &lt;em&gt;? To a user who is visually reading and interacting with your content on the screen, it may not matter which element you use as they will be able to gather other semantic information from the context of your page. To a visually impaired person relying on a screen reader (which can&rsquo;t draw upon nuanced semantic cues) using the wrong element could not only confuse them, but could actually change the meaning of your content. Consider the following examples from the w3c HTML 5.2 working draft:</p>
+
+
+<p>These examples show how changing the stress emphasis changes the meaning.</p>
+
+<p>First, a general statement of fact, with no stress:</p>
+<p> &lt;p&gt;Cats are cute animals.&lt;/p&gt;</p>
+<p>By emphasizing the first word, the statement implies that the kind of animal under discussion is in question (maybe someone is asserting that dogs are cute):</p>
+<p> &lt;p&gt;&lt;em&gt;Cats&lt;/em&gt; are cute animals.&lt;/p&gt;</p>
+<p>Moving the stress to the verb, one highlights that the truth of the entire sentence is in question (maybe someone is saying cats are not cute):</p>
+<p> &lt;p&gt;Cats &lt;em&gt;are&lt;/em&gt; cute animals.&lt;/p&gt;</p>
+<p>By moving it to the adjective, the exact nature of the cats is reasserted (maybe someone suggested cats were mean animals):</p>
+<p> &lt;p&gt;Cats are &lt;em&gt;cute&lt;/em&gt; animals.&lt;/p&gt;</p>
+<p>Similarly, if someone asserted that cats were vegetables, someone correcting this might emphasize the last word:</p>
+<p> &lt;p&gt;Cats are cute &lt;em&gt;animals&lt;/em&gt;.&lt;/p&gt;</p>
+<p>By emphasizing the entire sentence, it becomes clear that the speaker is fighting hard to get the point across. This kind of stress emphasis also typically affects the punctuation, hence the exclamation mark here.</p>
+<p> &lt;p&gt;&lt;em&gt;Cats are cute animals!&lt;/em&gt;&lt;/p&gt;</p>
+
+
+<p>A screen reader using the above HTML code would know which word to emphasize to translate the intended meaning. If &lt;i&gt; elements were used in place of &lt;em&gt;, it is possible that the screen reader would ignore the attribute completely, resulting in the user listening to six sentences that all sounded exactly the same. It is also interesting to note that all of the above mentioned semantic elements can be styled in any manner. &lt;b&gt; and &lt;i&gt; don&rsquo;t have to render as &lsquo;bold&rsquo; and &lsquo;italic&rsquo; respectively, although many developers still use these tags as such. HTML 5 has changed these elements to be more responsive and versatile in an attempt to produce websites that are more semantically rich. It remains to be seen if usage and customization of these elements will become standard practice. </p> <p>The semantic rich elements of HTML 5.2 represent a complex reality of what appears to be a seemingly simplified technology, as their function will not necessarily be appreciated by most users. This complication, Haas (1999) would argue, benefits concerns and sparks conversations towards the ultimate goal of website accessibility for all. So, when you&rsquo;re designing web content, remember to consider your users and the rich diversity of experience and needs that each bring to the table. Although a website may &lsquo;look&rsquo; the same to a sighted user, regardless of the elements used, web designers should habitually take advantage of the rich semantic toolset available to them to ensure that <strong><em>all</em></strong> users are able to have the same, useful, conversations with their website.</p>
+
+<h2>References</h2>
+
+<p>Braille Authority of North America (BANA). (2016). Section 5: Font Attributes. <a href="http://www.brailleauthority.org/formats/2011manual-web/formats05.html">http://www.brailleauthority.org/formats/2011manual-web/formats05.html</a></p> <p>BrailleWorks. (2016). History of Braille. <a href="https://brailleworks.com/braille-resources/history-of-braille/">https://brailleworks.com/braille-resources/history-of-braille/</a></p> <p>Cooke, Annemarie. &ldquo;A History of Accessibility at IBM.&rdquo; AccessWorld. Mar. 2004. American Foundation for the Blind. 13 Sept. 2005 &lt; http://www.afb.org/afbpress/pub.asp?DocID=aw050207&gt;.</p> <p>Courtney-Long, E. A., Carroll, D. D., Zhang, Q. C., Stevens, A. C., Griffin-Blake, S., Armour, B. S., &amp; Campbell, V. A. (2015). Prevalence of disability and disability type among adults—United States, 2013.&nbsp;<i>Morb Mortal Wkly Rep (MMWR)</i>,&nbsp;<i>64</i>(29), 777-783. </p> <p>Haas, C. (1999). On the relationship between old and new technologies.<i>Computers and Composition</i>,&nbsp;<i>16</i>(2), 209-228. </p> <p>Oli Studholme. (2012). The i, b, em, &amp; strong elements.<a href="http://html5doctor.com/i-b-em-strong-element/">http://html5doctor.com/i-b-em-strong-element/</a></p> <p>Redish, J. G. (2012). Letting Go of the Words: Writing Web Content that Works. Morgan Kaufmann. </p> w3c Web Platform Working Group. (2016) HTML5.2-Editor&rsquo;s draft (work in progress). <a href="http://w3c.github.io/html/single-page.html#introduction">http://w3c.github.io/html/single-page.html#introduction</a>
+
+<footer>
+  <p>Jessamina Blum | WRIT4662W | Dr. Ann Hill Duin | Historicizing a soft web technology</p>
+</footer>
+
+</body>
+</html>

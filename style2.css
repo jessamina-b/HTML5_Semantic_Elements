@@ -1,0 +1,22 @@
+@charset "UTF-8";
+body {
+	background-color: #b7b7b7;
+	font-family: futura, Tahoma, sans-serif;
+	font-size: medium;
+}
+
+h1 {
+	background-color: #F7B733;
+	padding: 4px;
+	border: 10px solid #F7B733;
+}
+
+h2 {
+background-color: white;
+border-bottom: 5px solid #FC4A1A;
+padding: 4px;
+}
+
+footer {
+	background-color: #F7B733;
+}
